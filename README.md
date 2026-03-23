@@ -100,7 +100,14 @@ npm run dev
 | **M4** | Final cleanup, deployment, updated docs | 10th April |
 
 ---
+## Progress (day wise)
 
+### Day 1
+- **Initialized project**: Created a new Vite + React app using `npm create vite@latest` and selected React.
+- **Set up Tailwind CSS**: Installed Tailwind and its dependencies.
+- **Customized theme**: Defined custom colors, fonts, and other design tokens in `index.css`  to establish a consistent theme for the app.
+
+---
 ## 👤 Author
 
 **[Moksh]**

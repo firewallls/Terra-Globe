@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+:root {
+    /* Backgrounds / Surfaces */
+    --color-page: #030509;
+    --color-surface: #060D18;
+    --color-surface-mid: #0D1E35;
+    --color-surface-edge: #1A2E48;
+    --color-border: rgba(238,242,255,0.05);
+    --color-border-strong: rgba(238,242,255,0.12);
+
+
+    --color-text-primary: #EEF2FF;    /* Text/Ice */
+    --color-text-secondary: #7E96AF;  /* Text/Mist */
+    --color-text-tertiary: #334155;   /* Text/Ghost */
+    --color-text-on-accent: #030509;  /* Space/Abyss */
+
+    /* Accents */
+    --color-signal: #00E5FF;          /* Signal/Cyan */
+    --color-signal-tint: rgba(0,229,255,0.20);
+    --color-green: #39D98A;           /* Signal/Green */
+    --color-green-tint: rgba(57,217,138,0.10);
+    --color-red: #FF4757;             /* Signal/Red */
+    --color-gold: #FFD166;            /* Signal/Gold */
+    --color-gold-tint: rgba(255,209,102,0.25);
+    --color-overlay-command: rgba(6,13,24,0.88);
+    --color-overlay-infoarc: rgba(6,13,24,0.90);
+    --color-overlay-tooltip: rgba(3,5,9,0.95);
+    --color-overlay-topbar: rgba(3,5,9,0.70);
+    --color-overlay-scrim: rgba(0,0,0,0.60);
+    --globe-ocean: #071428;
+    --globe-ocean-deep: #040C1C;
+    --globe-land: #112B1A;
+    --globe-land-light: #1A3D26;
+    --globe-grid: rgba(238,242,255,0.03);
+    --globe-equator: rgba(0,229,255,0.06);
+    --marker-default: rgba(0,229,255,0.70);
+    --marker-hover: #00E5FF;
+    --marker-selected: #FFD166;
+    --marker-compare: #39D98A;
+    --marker-dimmed: #1A2E48;
+    --marker-glow-cyan: rgba(0,229,255,0.25);
+    --marker-glow-gold: rgba(255,209,102,0.25);
+    --shadow-marker: 0 0 12px 0 rgba(0,229,255,0.60);
+    --shadow-marker-hot: 0 0 24px 2px rgba(0,229,255,0.80);
+    --shadow-marker-selected: 0 0 20px 2px rgba(255,209,102,0.70);
+    --shadow-data-positive: 0 0 10px 0 rgba(57,217,138,0.50);
+    --shadow-infoarc: 0 8px 48px 0 rgba(0,0,0,0.80);
+    --shadow-command: 0 20px 60px -10px rgba(0,0,0,0.90);
+    --shadow-topbar: 0 4px 24px 0 rgba(0,0,0,0.60);
+    --shadow-tooltip: 0 8px 48px 0 rgba(0,0,0,0.80);
+    --shadow-button: none;
+}
+.dark {
+    --color-page: #F7F8FA;          /* Light/Page */
+    --color-surface: #FFFFFF;        /* Light/Surface */
+    --color-surface-mid: #EEF1F5;    /* Light/SurfaceSunken */
+    --color-surface-edge: #E2E7EF;   /* Light/Border */
+    --color-border: #E2E7EF;         /* Light/Border */
+    --color-border-strong: #C8D0DC;  /* Light/BorderStrong */
+    --color-text-primary: #0F172A;
+    --color-text-secondary: #475569;
+    --color-text-tertiary: #94A3B8;
+    --color-text-on-accent: #FFFFFF;
+    --color-signal: #0066CC;
+    --color-signal-tint: rgba(0,102,204,0.10);
+    --color-green: #16A34A;
+    --color-green-tint: rgba(22,163,74,0.10);
+    --color-red: #DC2626;
+    --color-gold: #B45309;
+    --color-gold-tint: rgba(180,83,9,0.12);
+    --color-overlay-command: rgba(255,255,255,0.92);
+    --color-overlay-infoarc: rgba(255,255,255,0.95);
+    --color-overlay-tooltip: rgba(15,23,42,0.92);
+    --color-overlay-topbar: rgba(247,248,250,0.85);
+    --color-overlay-scrim: rgba(15,23,42,0.40);
+    --globe-ocean: #1A6FA8;
+    --globe-ocean-deep: #1055A0;
+    --globe-land: #5C8A3C;
+    --globe-land-light: #7CA55C;
+    --globe-grid: rgba(15,23,42,0.05);
+    --globe-equator: rgba(0,102,204,0.10);
+    --marker-default: rgba(0,102,204,0.85);
+    --marker-hover: #0066CC;
+    --marker-selected: #B45309;
+    --marker-compare: #16A34A;
+    --marker-dimmed: #94A3B8;
+    --marker-glow-cyan: rgba(0,102,204,0.20);
+    --marker-glow-gold: rgba(180,83,9,0.20);
+    --shadow-marker: 0 2px 8px 0 rgba(0,102,204,0.30);
+    --shadow-marker-hot: 0 4px 16px 2px rgba(0,102,204,0.45);
+    --shadow-marker-selected: 0 4px 16px 2px rgba(180,83,9,0.40);
+    --shadow-data-positive: 0 2px 8px 0 rgba(22,163,74,0.25);
+    --shadow-infoarc: 0 8px 32px -4px rgba(15,23,42,0.18),
+    0 2px 8px 0 rgba(15,23,42,0.08);
+    --shadow-command: 0 20px 60px -10px rgba(15,23,42,0.25),
+    0 4px 12px 0 rgba(15,23,42,0.10);
+    --shadow-topbar: 0 1px 4px 0 rgba(15,23,42,0.08);
+    --shadow-tooltip: 0 4px 12px 0 rgba(15,23,42,0.30);
+    --shadow-button: 0 1px 3px 0 rgba(15,23,42,0.12);
+}
+
+@theme {
+    /* Colors */
+    --color-page: var(--color-page);
+    --color-surface: var(--color-surface);
+    --color-surface-mid: var(--color-surface-mid);
+    --color-surface-edge: var(--color-surface-edge);
+    --color-border: var(--color-border);
+    --color-border-strong: var(--color-border-strong);
+    --color-text-primary: var(--color-text-primary);
+    --color-text-secondary: var(--color-text-secondary);
+    --color-text-tertiary: var(--color-text-tertiary);
+    --color-text-on-accent: var(--color-text-on-accent);
+    --color-signal: var(--color-signal);
+    --color-signal-tint: var(--color-signal-tint);
+    --color-green: var(--color-green);
+    --color-green-tint: var(--color-green-tint);
+    --color-red: var(--color-red);
+    --color-gold: var(--color-gold);
+    --color-gold-tint: var(--color-gold-tint);
+    --color-overlay-command: var(--color-overlay-command);
+    --color-overlay-infoarc: var(--color-overlay-infoarc);
+    --color-overlay-tooltip: var(--color-overlay-tooltip);
+    --color-overlay-topbar: var(--color-overlay-topbar);
+    --color-overlay-scrim: var(--color-overlay-scrim);
+    --color-globe-ocean: var(--globe-ocean);
+    --color-globe-ocean-deep: var(--globe-ocean-deep);
+    --color-globe-land: var(--globe-land);
+    --color-globe-land-light: var(--globe-land-light);
+    --color-globe-grid: var(--globe-grid);
+    --color-globe-equator: var(--globe-equator);
+    --color-marker-default: var(--marker-default);
+    --color-marker-hover: var(--marker-hover);
+    --color-marker-selected: var(--marker-selected);
+    --color-marker-compare: var(--marker-compare);
+    --color-marker-dimmed: var(--marker-dimmed);
+    --color-marker-glow-cyan: var(--marker-glow-cyan);
+    --color-marker-glow-gold: var(--marker-glow-gold);
+
+    /* Shadows */
+    --shadow-marker: var(--shadow-marker);
+    --shadow-marker-hot: var(--shadow-marker-hot);
+    --shadow-marker-selected: var(--shadow-marker-selected);
+    --shadow-data-positive: var(--shadow-data-positive);
+    --shadow-infoarc: var(--shadow-infoarc);
+    --shadow-command: var(--shadow-command);
+    --shadow-topbar: var(--shadow-topbar);
+    --shadow-tooltip: var(--shadow-tooltip);
+    --shadow-button: var(--shadow-button);
+
+    /* Blur */
+    --backdrop-blur-infoarc: 40px;
+    --backdrop-blur-command: 32px;
+    --backdrop-blur-topbar: 16px;
+    --backdrop-blur-tooltip: 8px;
+
+    /* Border radius */
+    --radius-sm: 2px;
+    --radius-default: 4px;
+    --radius-pill: 20px;
+
+    /* Spacing (8px grid) */
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-20: 20px;
+    --spacing-24: 24px;
+    --spacing-32: 32px;
+    --spacing-40: 40px;
+    --spacing-48: 48px;
+    --spacing-64: 64px;
+    --spacing-80: 80px;
+
+    /* Font families */
+    --font-bebas: "Bebas Neue", sans-serif;
+    --font-familjen: "Familjen Grotesk", sans-serif;
+    --font-azeret-mono: "Azeret Mono", monospace;
+
+    /* Font sizes (with line-height and letter-spacing) */
+    --text-display-hero: 120px;
+    --text-display-hero--line-height: 1;
+    --text-display-hero--letter-spacing: 12px;
+
+    --text-display-stat: 56px;
+    --text-display-stat--line-height: 1;
+    --text-display-stat--letter-spacing: 4px;
+
+    --text-display-number: 36px;
+    --text-display-number--line-height: 1;
+    --text-display-number--letter-spacing: 2px;
+
+    --text-display-label: 18px;
+    --text-display-label--line-height: 1;
+    --text-display-label--letter-spacing: 6px;
+
+    --text-ui-base: 14px;
+    --text-ui-base--line-height: 1.5;
+    --text-ui-base--letter-spacing: 0;
+
+    --text-ui-small: 12px;
+    --text-ui-small--line-height: 1.5;
+    --text-ui-small--letter-spacing: 0.5px;
+
+    --text-ui-label: 10px;
+    --text-ui-label--line-height: 1.4;
+    --text-ui-label--letter-spacing: 2.5px;
+
+    --text-ui-tag: 11px;
+    --text-ui-tag--line-height: 1;
+    --text-ui-tag--letter-spacing: 1px;
+
+    --text-ui-navitem: 12px;
+    --text-ui-navitem--line-height: 1;
+    --text-ui-navitem--letter-spacing: 2px;
+
+    --text-ui-button: 11px;
+    --text-ui-button--line-height: 1;
+    --text-ui-button--letter-spacing: 2px;
+
+    --text-mono-dataxl: 48px;
+    --text-mono-dataxl--line-height: 1;
+    --text-mono-dataxl--letter-spacing: -1px;
+
+    --text-mono-datalg: 22px;
+    --text-mono-datalg--line-height: 1;
+    --text-mono-datalg--letter-spacing: 0;
+
+    --text-mono-datamd: 14px;
+    --text-mono-datamd--line-height: 1.3;
+    --text-mono-datamd--letter-spacing: 0.5px;
+
+    --text-mono-datasm: 11px;
+    --text-mono-datasm--line-height: 1.4;
+    --text-mono-datasm--letter-spacing: 1px;
+
+    --text-mono-dataxs: 9px;
+    --text-mono-dataxs--line-height: 1.4;
+    --text-mono-dataxs--letter-spacing: 1.5px;
+}
+
