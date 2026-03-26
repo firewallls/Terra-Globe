@@ -1,7 +1,10 @@
-name: deploy.yml
+name: Automatic deploy of my vanilla app
 on:
   push:
     branches: ['main']
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
@@ -13,12 +16,10 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '25'
-      - run: echo 'Node setup success'
       - name: Clean install of pkgs
         run: npm ci
       - name: Build app
         run: npm run build
-      - run: echo 'build success'
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
