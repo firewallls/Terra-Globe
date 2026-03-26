@@ -1,6 +1,7 @@
 {
   "name": "terra",
   "version": "0.0.0",
+  "homepage": "https://firewallls.github.io/Terra/",
   "private": true,
   "type": "module",
   "scripts": {
