@@ -45,7 +45,7 @@ REST Countries provides the capital city name → that city name is passed direc
 
 ## 🛠️ Technologies
 
-- **React** — Core stack, vite
+- **vanilla** — Core stack, vite
 - **Three.js (r128)** — 3D globe rendering via WebGL
 - **REST Countries API** — Country dataset
 - **wttr.in / 7timer.info API** — Weather data
@@ -53,7 +53,10 @@ REST Countries provides the capital city name → that city name is passed direc
 - **GitHub Pages** — Deployment (Milestone 4)
 
 ---
+## Live URL
+[Click here to view the app](https://firewallls.github.io/Terra-Globe/)
 
+---
 ## ⚙️ How to Run
 
 No build tools or npm required. Just open in a browser.
@@ -107,9 +110,10 @@ npm run dev
 - **Set up Tailwind CSS**: Installed Tailwind and its dependencies.
 - **Customized theme**: Defined custom colors, fonts, and other design tokens in `index.css`  to establish a consistent theme for the app.
 
-### Day 2
-- **Starfield.tsx**: Created Startfield.tsx which create many moving stars in backgroud.
-- **GlobeCanvas.tsx**: Created a canvas for all my layer of globe and starfield and other layes like navbar
+### Day 2 and Day 3
+- Changed my project techstack to vite+vanilla
+- created github action workflow for automatic deployment
+- **Starfield.js**: Created Startfield.js which create many moving stars in backgroud.
 ---
 ## 👤 Author
 
