@@ -120,7 +120,7 @@ export default function CommandBar(mountEl) {
       <div id="cmd-filters-container"></div>
       <div id="cmd-sort-container"></div>
       <div id="cmd-results-header-container"></div>
-      <div id="cmd-results-list-container" class="flex-1 overflow-hidden"></div>
+      <div id="cmd-results-list-container" class="flex-1 flex flex-col min-h-0 overflow-hidden"></div>
     </div>
   `
 

@@ -296,3 +296,12 @@
 .actionBtns:hover {
     border-bottom: 2px solid var(--color-signal);
 }
+
+/* Hide scrollbars but keep scrolling functionality */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
