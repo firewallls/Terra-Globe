@@ -111,7 +111,7 @@ npm run dev
 - **Customized theme**: Defined custom colors, fonts, and other design tokens in `index.css`  to establish a consistent theme for the app.
 
 ### Day 2 and Day 3
-- Changed my project techstack to vite+vanilla
+- Changed my project tech stack to Vite + Vanilla
 - created github action workflow for automatic deployment
 - **Starfield.js**: Created Startfield.js which create many moving stars in backgroud.
 ---

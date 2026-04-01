@@ -51,6 +51,7 @@
     --shadow-tooltip: 0 8px 48px 0 rgba(0,0,0,0.80);
     --shadow-button: none;
 }
+
 .light {
     --color-page: #F7F8FA;          /* Light/Page */
     --color-surface: #FFFFFF;        /* Light/Surface */
@@ -238,4 +239,60 @@
     --text-mono-dataxs: 9px;
     --text-mono-dataxs--line-height: 1.4;
     --text-mono-dataxs--letter-spacing: 1.5px;
+}
+
+/* Pulse animation for live dot */
+@keyframes pulseOpacity {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+.pulse-dot {
+    animation: pulseOpacity 1.2s ease-in-out infinite;
+}
+
+/* Subtle cyan glow for TERRA wordmark (using signal color) */
+.glow-cyan-text {
+    text-shadow: 0 0 3px var(--color-signal-tint);
+}
+
+/* Tooltip container and text */
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+.tooltip .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--color-overlay-tooltip);
+    backdrop-filter: blur(var(--backdrop-blur-tooltip));
+    color: var(--color-text-secondary);
+    font-family: var(--font-familjen);
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    padding: 4px 8px;
+    border-radius: 2px;
+    border: 1px solid var(--color-border);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+    white-space: nowrap;
+    transition: opacity 0.2s ease, visibility 0.2s;
+    pointer-events: none;
+    z-index: 20;
+}
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Search icon hover effect */
+.search-icon-hover:hover {
+    color: var(--color-text-primary);
+    text-shadow: 0 0 4px var(--color-signal-tint);
+}
+
+.actionBtns:hover {
+    border-bottom: 2px solid var(--color-signal);
 }
